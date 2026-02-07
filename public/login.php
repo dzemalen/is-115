@@ -7,7 +7,7 @@ require_once __DIR__ . '/../inc/auth.inc.php';
 
 // Hvis bruker allerede er logget inn, send til forsiden
 if (er_logget_inn()) {
-    redirect('/soknadssystem/public/index.php');
+    redirect('/index.php');
 }
 
 // Verdier til skjema / feilmelding
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         [$ok, $melding] = forsok_innlogging($epost, $passord);
 
         if ($ok) {
-            redirect('/soknadssystem/public/index.php');
+            redirect('/index.php');
         } else {
             $feilmelding = $melding;
         }

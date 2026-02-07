@@ -28,7 +28,7 @@ $melding = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!$bruker) {
-        redirect('/soknadssystem/public/login.php');
+        redirect('/login.php');
     }
 
     if ($bruker['rolle'] !== 'søker') {
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         );
 
         if ($ok) {
-            redirect('/soknadssystem/public/mine_soknader.php');
+            redirect('/mine_soknader.php');
         } else {
             $feil[] = "Klarte ikke å lagre søknaden. Prøv igjen.";
         }

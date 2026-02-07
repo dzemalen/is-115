@@ -27,11 +27,11 @@ $stillinger = hent_alle_stillinger();
         </p>
         <p>
             <a href="min_profil.php">Min profil</a> |
-            <a href="/soknadssystem/public/logg_ut.php">Logg ut</a>
+            <a href="/logg_ut.php">Logg ut</a>
         </p>
     <?php else: ?>
         <p>Du er ikke logget inn.</p>
-        <p><a href="/soknadssystem/public/login.php">Gå til innlogging</a></p>
+        <p><a href="/login.php">Gå til innlogging</a></p>
     <?php endif; ?>
 
     <?php if ($bruker): ?>

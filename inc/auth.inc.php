@@ -35,7 +35,7 @@ function er_logget_inn(): bool
 function krever_innlogging()
 {
     if (!er_logget_inn()) {
-        redirect('/soknadssystem/public/login.php');
+        redirect('/login.php');
     }
 }
 
@@ -45,7 +45,7 @@ function krever_rolle(string $rolle)
     $bruker = hent_innlogget_bruker();
 
     if (!$bruker) {
-        redirect('/soknadssystem/public/login.php');
+        redirect('/login.php');
     }
 
     if (($bruker['rolle'] ?? '') !== $rolle) {
@@ -130,5 +130,5 @@ function logg_ut()
     $_SESSION = [];
     session_destroy();
 
-    redirect('/soknadssystem/public/login.php');
+    redirect('/login.php');
 }

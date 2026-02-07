@@ -7,7 +7,7 @@ require_once __DIR__ . '/../inc/auth.inc.php';
 
 // Hvis man allerede er logget inn, er det ikke vits å registrere ny bruker.
 if (er_logget_inn()) {
-    redirect('/soknadssystem/public/index.php');
+    redirect('/index.php');
 }
 
 // Standardverdier til feltene.

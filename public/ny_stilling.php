@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         );
 
         if ($ok) {
-            redirect('/soknadssystem/public/index.php');
+            redirect('/index.php');
         } else {
             $feil[] = "Klarte ikke å lagre stillingen. Prøv igjen.";
         }

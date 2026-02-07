@@ -1,0 +1,17 @@
+{
+  "name": "student/soknadssystem",
+  "description": "Enkelt søknadssystem i PHP",
+  "type": "project",
+  "require": {
+    "php": ">=8.1"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.0",
+    "phpunit/phpunit": "^10.0"
+  },
+  "scripts": {
+    "lint": "find . -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l",
+    "format": "php-cs-fixer fix --dry-run --diff",
+    "test": "phpunit"
+  }
+}
